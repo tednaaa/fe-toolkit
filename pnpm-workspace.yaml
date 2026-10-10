@@ -1,0 +1,9 @@
+minimumReleaseAgeExcludePrune: true
+minimumReleaseAgeExclude:
+  - '@tednaaa/eslint-config@0.1.1'
+
+trustPolicy: no-downgrade
+shellEmulator: true
+
+allowBuilds:
+  lefthook: false

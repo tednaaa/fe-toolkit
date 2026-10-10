@@ -1,0 +1,102 @@
+{
+	"name": "@tednaaa/fe-tools",
+	"type": "module",
+	"version": "0.0.0",
+	"description": "Personal frontend tools",
+	"license": "GPL-3.0-only",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tednaaa/fe-tools"
+	},
+	"keywords": [
+		"ncu",
+		"env",
+		"vite",
+		"vue",
+		"testing",
+		"vitest"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"sideEffects": [
+		"./dist/testing/setup.js"
+	],
+	"exports": {
+		"./ncurc": {
+			"types": "./dist/ncurc.d.ts",
+			"default": "./dist/ncurc.js"
+		},
+		"./env": {
+			"types": "./dist/env.d.ts",
+			"default": "./dist/env.js"
+		},
+		"./testing": {
+			"types": "./dist/testing/index.d.ts",
+			"default": "./dist/testing/index.js"
+		},
+		"./testing/setup": {
+			"types": "./dist/testing/setup.d.ts",
+			"default": "./dist/testing/setup.js"
+		},
+		"./testing/router": {
+			"types": "./dist/testing/router.d.ts",
+			"default": "./dist/testing/router.js"
+		},
+		"./testing/axios": {
+			"types": "./dist/testing/axios.d.ts",
+			"default": "./dist/testing/axios.js"
+		}
+	},
+	"files": [
+		"CHANGELOG.md",
+		"README.md",
+		"dist"
+	],
+	"scripts": {
+		"prepare": "lefthook install",
+		"build": "tsdown",
+		"dev": "tsdown --watch",
+		"lint": "eslint",
+		"lint:fix": "eslint --fix",
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run",
+		"prepublishOnly": "pnpm run build"
+	},
+	"peerDependencies": {
+		"@vue/test-utils": "^2.4.0",
+		"axios": "^1.0.0",
+		"vue": "^3.5.0",
+		"vue-router": ">=4.0.0"
+	},
+	"peerDependenciesMeta": {
+		"@vue/test-utils": {
+			"optional": true
+		},
+		"axios": {
+			"optional": true
+		},
+		"vue": {
+			"optional": true
+		},
+		"vue-router": {
+			"optional": true
+		}
+	},
+	"devDependencies": {
+		"@arethetypeswrong/core": "0.18.3",
+		"@tednaaa/eslint-config": "0.1.1",
+		"@vue/test-utils": "2.5.1",
+		"axios": "1.20.0",
+		"eslint": "10.11.0",
+		"jiti": "2.7.0",
+		"jsdom": "30.1.1",
+		"lefthook": "2.2.1",
+		"publint": "0.3.21",
+		"tsdown": "0.23.0",
+		"typescript": "6.0.3",
+		"vitest": "4.1.11",
+		"vue": "3.5.43",
+		"vue-router": "5.3.1"
+	}
+}
