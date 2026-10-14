@@ -4,7 +4,7 @@ Needs `axios`. Fakes for specs that stub a service and need it to fail like the 
 
 ## createAxiosError
 
-`createAxiosError(data, status = 400, config?)` — an `AxiosError` shaped like a real failed response: `response.data`, `response.status`, `statusText`, and `code` set to `ERR_BAD_RESPONSE` for 5xx and `ERR_BAD_REQUEST` otherwise.
+`createAxiosError(data, status = 400, config?)` — an `AxiosError` shaped like a real failed response: `response.data`, `response.status`, and `code` set to `ERR_BAD_RESPONSE` for 5xx and `ERR_BAD_REQUEST` otherwise. `statusText` is empty, as HTTP/2 servers send it.
 
 ```ts
 import { createAxiosError } from '@tednaaa/fe-tools/testing/axios';

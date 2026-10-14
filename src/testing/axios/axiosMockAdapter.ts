@@ -1,7 +1,6 @@
 import type { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 import { AxiosHeaders } from 'axios';
 import { createAxiosError } from './createAxiosError';
-import { statusText } from './statusText';
 
 function isSuccess(status: number): boolean {
 	return status >= 200 && status < 300;
@@ -11,5 +10,5 @@ export async function axiosMockAdapter(status: number, config: InternalAxiosRequ
 	if (!isSuccess(status))
 		throw createAxiosError({}, status, config);
 
-	return { data: {}, status, statusText: statusText(status), headers: new AxiosHeaders(), config };
+	return { data: {}, status, statusText: '', headers: new AxiosHeaders(), config };
 }
