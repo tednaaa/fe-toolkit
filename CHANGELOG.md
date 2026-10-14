@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.1 (2026-10-14)
+
+- docs: ship the docs pages in the package, matching the installed version [`f98986b5`](https://github.com/tednaaa/fe-tools/commit/f98986b56a9e8613ddb32deef85fa0e11e77473a)
+
 ## v0.2.0 (2026-10-14)
 
 - fix(testing): leave statusText empty in fake axios responses, as HTTP/2 servers send it [`143e9be4`](https://github.com/tednaaa/fe-tools/commit/143e9be407f97bc0e7d510a12942386f221edbc9)
