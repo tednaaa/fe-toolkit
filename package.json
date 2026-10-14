@@ -1,7 +1,7 @@
 {
 	"name": "@tednaaa/fe-tools",
 	"type": "module",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"description": "Personal frontend tools",
 	"license": "GPL-3.0-only",
 	"repository": {
