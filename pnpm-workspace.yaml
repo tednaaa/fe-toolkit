@@ -6,4 +6,5 @@ trustPolicy: no-downgrade
 shellEmulator: true
 
 allowBuilds:
+  esbuild: false
   lefthook: false

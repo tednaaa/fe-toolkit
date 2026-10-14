@@ -8,5 +8,5 @@
 		"noEmit": true,
 		"skipLibCheck": true
 	},
-	"include": ["src", "eslint.config.ts", "tsdown.config.ts", "vitest.config.ts", "vitest.setup.ts"]
+	"include": ["src", "eslint.config.ts", "tsdown.config.ts", "vitest.config.ts", "vitest.setup.ts", "docs/.vitepress/config.ts"]
 }
