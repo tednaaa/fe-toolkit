@@ -45,7 +45,8 @@
 	"files": [
 		"CHANGELOG.md",
 		"README.md",
-		"dist"
+		"dist",
+		"docs/src"
 	],
 	"scripts": {
 		"prepare": "lefthook install",
