@@ -1,10 +1,8 @@
-import { env } from 'node:process';
 import { defineConfig } from 'vitepress';
 
 export default defineConfig({
 	title: '@tednaaa/fe-tools',
 	description: 'Personal frontend tools: env reading and Vitest helpers',
-	base: env.DOCS_BASE ?? '/',
 	srcDir: 'src',
 	cleanUrls: true,
 

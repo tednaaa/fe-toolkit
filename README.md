@@ -2,7 +2,7 @@
 
 Personal frontend tools. Each entry is a separate subpath with its own optional peers.
 
-Documentation for `/env` and `/testing/*` is at https://tednaaa.github.io/fe-tools/. Its source is in `docs/`.
+Documentation for `/env` and `/testing/*` is at https://fe-tools.indertale.dev. Its source is in `docs/`.
 
 ```sh
 pnpm add -D -E @tednaaa/fe-tools
