@@ -1,6 +1,9 @@
 type VariableName = `VITE_${string}`;
 
-type Definition = VariableName | { name: VariableName; fallback: string } | { name: VariableName; optionalForDevelopment: true };
+type Definition
+	= | VariableName
+		| { name: VariableName; fallback: string; optionalForDevelopment?: never }
+		| { name: VariableName; optionalForDevelopment: true; fallback?: never };
 
 type Envs<T extends Record<string, Definition>> = {
 	readonly [K in keyof T]: T[K] extends { optionalForDevelopment: true } ? string | undefined : string;
