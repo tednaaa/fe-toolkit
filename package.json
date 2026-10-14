@@ -19,9 +19,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"sideEffects": [
-		"./dist/testing/setup.js"
-	],
+	"sideEffects": false,
 	"exports": {
 		"./ncurc": {
 			"types": "./dist/ncurc.d.ts",
@@ -31,13 +29,9 @@
 			"types": "./dist/env.d.ts",
 			"default": "./dist/env.js"
 		},
-		"./testing": {
-			"types": "./dist/testing/index.d.ts",
-			"default": "./dist/testing/index.js"
-		},
-		"./testing/setup": {
-			"types": "./dist/testing/setup.d.ts",
-			"default": "./dist/testing/setup.js"
+		"./testing/queries": {
+			"types": "./dist/testing/queries.d.ts",
+			"default": "./dist/testing/queries.js"
 		},
 		"./testing/router": {
 			"types": "./dist/testing/router.d.ts",

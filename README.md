@@ -39,38 +39,27 @@ export const envs = defineEnvs(import.meta.env, {
 
 ## `/testing`
 
-Needs `vue` and `@vue/test-utils`.
-
-### Setup
-
-Adds `findElementByText`, `getElementByText`, `findComponentByText` and `getComponentByText` to every wrapper.
-
-```ts
-// vite.config.ts
-export default defineConfig({
-	test: {
-		setupFiles: ['@tednaaa/fe-tools/testing/setup'],
-	},
-});
-```
-
-Add it to the spec tsconfig too, so the wrapper types know the new methods.
-
-```json
-{
-	"compilerOptions": {
-		"types": ["vitest/globals", "@tednaaa/fe-tools/testing/setup"]
-	}
-}
-```
-
 ### Selectors
 
 `findElement`, `getElement`, `findElementByText`, `getElementByText` query `document`, for teleported menus and dialogs.
 
+### Text finders
+
+Needs `vue` and `@vue/test-utils`. `textFinders` adds `findElementByText`, `getElementByText`, `findComponentByText` and `getComponentByText` to every wrapper.
+
+```ts
+// vitest.setup.ts
+import { textFinders } from '@tednaaa/fe-tools/testing';
+import { config } from '@vue/test-utils';
+
+config.plugins.VueWrapper.install(textFinders);
+```
+
+> Include `vitest.setup.ts` in the spec tsconfig, so the wrapper types know the new methods.
+
 ### `/testing/router`
 
-Needs `vue-router`. `withRouter(routes)` creates a memory-history router with every route component stubbed.
+Needs `vue` and `vue-router`. `withRouter(routes)` creates a memory-history router with every route component stubbed.
 
 ### `/testing/axios`
 
