@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import { defineComponent, h } from 'vue';
-import { withRouter } from './withRouter';
+import { withTestRouter } from './withTestRouter';
 
 const Page = defineComponent({ name: 'Page', render: () => h('main') });
 
-describe('withRouter', () => {
+describe('withTestRouter', () => {
 	it('stubs the components of nested and named-view routes', async () => {
-		const router = withRouter([
+		const router = withTestRouter([
 			{ path: '/', component: Page, children: [{ path: 'pairs', components: { default: Page, sidebar: Page } }] },
 		]);
 

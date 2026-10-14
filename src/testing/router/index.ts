@@ -1,1 +1,1 @@
-export { withRouter } from './withRouter';
+export { withTestRouter } from './withTestRouter';

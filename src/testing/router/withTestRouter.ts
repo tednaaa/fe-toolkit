@@ -19,7 +19,7 @@ function stubRoute(record: RouteRecordRaw): RouteRecordRaw {
 	return stubbed;
 }
 
-export function withRouter(routes: readonly RouteRecordRaw[]): Router {
+export function withTestRouter(routes: readonly RouteRecordRaw[]): Router {
 	return createRouter({
 		history: createMemoryHistory(),
 		routes: routes.map(stubRoute),
